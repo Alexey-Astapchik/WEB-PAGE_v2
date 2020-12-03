@@ -1,0 +1,90 @@
+.search{
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-input{
+        background-color: #fffffe;
+        border: 1px solid transparent;
+        border-radius: 50px;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.6rem;
+        padding: .7rem 2rem;
+        width: 90%;
+        transition: all .3s;
+        &:focus{
+            outline: none;
+            width: 100%;
+        }
+    }   
+}
+.logo{
+    margin-left: 3rem;
+
+}
+
+.user-nav{
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+
+    & > *{
+        padding: 0 2rem;
+        cursor: pointer;
+    }
+}
+
+.side-nav{
+    font-size: 2.1rem;
+    list-style: none;
+    margin-top: 4rem;
+    &-item{
+        display: flex;
+        align-items: center;
+        position: relative;
+        &:not(:last-child){
+            margin-bottom: .5rem;
+        }
+    }
+    &-item::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 3px;
+        background-color: #ff8906;
+        transform: scaleY(0);
+        transition: transform .2s ease,
+                    width .4s .2s;
+        
+    } 
+    
+
+    &-item:hover::before{
+        transform: scaleY(1);
+        width: 100%; 
+    }
+
+    &-icon{
+        color: #a7a9be;
+        margin-left: 3.5rem;
+        z-index: 10;
+    }
+
+    &-link{
+        color: #a7a9be;
+        text-transform: uppercase;
+        padding: 1.5rem 3rem;
+        text-decoration: none;
+        z-index: 10;
+    }
+
+}
+
+.legal{
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 2.5rem;
+    color: #a7a9be;
+}
